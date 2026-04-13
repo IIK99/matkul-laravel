@@ -1,0 +1,12 @@
+membuat migrate
+php artisan make:model Projects -m
+
+baru migrate
+php artisan migrate
+klik yes
+
+membuat Seeder
+php artisan make:seeder ProjectSeeder
+kemudian di seed
+php artisan db:seed
+
