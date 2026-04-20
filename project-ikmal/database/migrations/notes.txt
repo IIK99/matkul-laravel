@@ -10,3 +10,5 @@ php artisan make:seeder ProjectSeeder
 kemudian di seed
 php artisan db:seed
 
+membuat controller
+php artisan make:controller ProjectController
