@@ -1,4 +1,4 @@
-membuat migrate
+membuat model
 php artisan make:model Projects -m
 
 baru migrate
