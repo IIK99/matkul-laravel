@@ -14,18 +14,21 @@
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                We Are Feane
+                <span class="text-warning">Cerita Kami</span><br>
+                Dari Hati, Untuk Perut
               </h2>
             </div>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
+              Aldi's Burger lahir dari ide sederhana: burger enak gak harus mahal. Dengan konsep open kitchen, setiap burger dibuat langsung di depan mata — roti dipanggang, patty di-grill dengan saus BBQ, disusun dengan cinta.
+<br><br>
+Nama "Gallagher" terinspirasi dari Liam Gallagher, vokalis OASIS — karena Aldi dan Gallagher sama-sama berakhiran "-er". Dan sama-sama bikin orang ketagihan.
+<br><br>
+<span class="text-warning">🎵 "Aldis Burger Cempaka Putih rotinya lembut dagingnya Juicy Luicy Mahalini Rizky Febian bisa pesan online!" 🎵</span><br>
+<i>— Jingle yang bikin seluruh Indonesia penasaran</i>
             </p>
-            <a href="">
+            {{-- <a href="">
               Read More
-            </a>
+            </a> --}}
           </div>
         </div>
       </div>

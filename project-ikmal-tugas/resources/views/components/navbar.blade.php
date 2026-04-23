@@ -4,7 +4,7 @@
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="{{ route('home') }}">
             <span>
-              Feane
+              <span class="text-warning">Aldi's Burger </span>🍔
             </span>
           </a>
 

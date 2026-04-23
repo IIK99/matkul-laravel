@@ -11,10 +11,12 @@
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
                     <h1>
-                      Fast Food Restaurant
+                      Aldi's <span class="text-warning">Burger</span>
                     </h1>
                     <p>
-                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                      Burgernya Indonesia 🇮🇩
+<br>
+"Aldis Burger Cempaka Putih rotinya lembut dagingnya Juicy Luicy Mahalini Rizky Febian bisa pesan online"
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
@@ -32,10 +34,11 @@
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
                     <h1>
-                      Fast Food Restaurant
+                      Semua burger milik Allah
                     </h1>
                     <p>
-                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                      Burger BANGOR, Burger KING, MCD's, KFC, A&W <br>
+                      Semua itu milik Allah SWT, kita hanya bisa menikmati dan bersyukur atas nikmatnya.
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
@@ -53,10 +56,10 @@
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
                     <h1>
-                      Fast Food Restaurant
+                     Viral di TikTok & Instagram 🔥
                     </h1>
                     <p>
-                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                     <b>Datang Langsung! 📍 Cempaka Putih, Jakarta Pusat</b> <br> Buka setiap hari 09.00–22.00 WIB. <br> ⭐ 4.4 di Google Maps · Mulai Rp 24.000 · 100% Halal
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
@@ -961,18 +964,21 @@
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                We Are Feane
+                <span class="text-warning">Cerita Kami</span><br>
+                Dari Hati, Untuk Perut
               </h2>
             </div>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
+              Aldi's Burger lahir dari ide sederhana: burger enak gak harus mahal. Dengan konsep open kitchen, setiap burger dibuat langsung di depan mata — roti dipanggang, patty di-grill dengan saus BBQ, disusun dengan cinta.
+<br><br>
+Nama "Gallagher" terinspirasi dari Liam Gallagher, vokalis OASIS — karena Aldi dan Gallagher sama-sama berakhiran "-er". Dan sama-sama bikin orang ketagihan.
+<br><br>
+<span class="text-warning">🎵 "Aldis Burger Cempaka Putih rotinya lembut dagingnya Juicy Luicy Mahalini Rizky Febian bisa pesan online!" 🎵</span><br>
+<i>— Jingle yang bikin seluruh Indonesia penasaran</i>
             </p>
-            <a href="">
+            {{-- <a href="">
               Read More
-            </a>
+            </a> --}}
           </div>
         </div>
       </div>
