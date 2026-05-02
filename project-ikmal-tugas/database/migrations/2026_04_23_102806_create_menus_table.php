@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('image');
             $table->string('title');
             $table->text('description');
+            $table->text('composition')->nullable();
             $table->integer('price');
             $table->timestamps();
         });
