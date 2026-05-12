@@ -12,3 +12,9 @@ php artisan db:seed
 
 membuat controller
 php artisan make:controller ProjectController
+
+controller admin
+php artisan make:controller AdminProjectController
+
+bikin crud
+php artisan route:list

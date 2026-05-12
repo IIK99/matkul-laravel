@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminProjectController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,11 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/', function () {
+        return view('admin.home');
+    })->name('dashboard');
+
+    Route::resource('projects', AdminProjectController::class);
+});
