@@ -19,6 +19,10 @@ Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
 
+// Route::post('/contact', function () {
+//     return redirect()->route('contact')->with('success', 'Terima kasih telah menghubungi kami!');
+// })->name('contact.submit');
+
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', function () {
         return view('admin.home');

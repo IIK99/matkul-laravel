@@ -10,7 +10,7 @@
     <navbar class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
             <a href="{{ route('home') }}" class="navbar-brand">My Web Profile</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">

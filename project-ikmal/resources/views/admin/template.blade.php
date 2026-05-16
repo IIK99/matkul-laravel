@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title','Web Profile')</title>
+    <title>@yield('title','Admin Web Profile')</title>
     <link rel="stylesheet" href="{{ asset('bootstrap-5.3.8-dist/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.8/css/dataTables.dataTables.css">
 </head>
 <style>
     body {
@@ -40,10 +40,10 @@
 </style>
 
 <body>
-    <navbar class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <navbar class="navbar navbar-expand-lg navbar-dark bg-warning fixed-top shadow-sm px-3">
         <div class="container">
             <a href="{{ route('admin.dashboard') }}" class="navbar-brand">My Web Profile</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"></button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -74,7 +74,7 @@
     </footer>
     <script src='{{ asset("bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js") }}'></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.3.8/js/dataTables.js"></script>
     @yield('scripts')
 </body>
 </html>
