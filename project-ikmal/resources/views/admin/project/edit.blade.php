@@ -13,7 +13,7 @@
                     </ul>
                 </div>
             @endif
-            <form action="{{ route('admin.projects.update', $project->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('projects.update', $project->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="row">
@@ -46,7 +46,7 @@
                     <textarea class="form-control" id="description" name="description" rows="4" required>{{ $project->description }}</textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Update Project</button>
-                <a href="{{ route('admin.projects.index') }}" class="btn btn-danger">Cancel</a>
+                <a href="{{ route('projects.index') }}" class="btn btn-danger">Cancel</a>
             </form>
         </div>
     </div>

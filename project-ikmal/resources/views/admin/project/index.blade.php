@@ -2,7 +2,7 @@
 @section('content')
     <div class="container mt-5">
         <h3 class="mb-4">Data Project</h3>
-        <a href="{{ route('admin.projects.create') }}" class="btn btn-primary mb-3">Add Project</a>
+        <a href="{{ route('projects.create') }}" class="btn btn-primary mb-3">Add Project</a>
         <div>
             @if(session('success'))
                 <div class="alert alert-success">
@@ -36,8 +36,8 @@
                                 <td>{{ $project->teknologi }}</td>
                                 <td>{{ $project->status }}</td>
                                 <td>
-                                    <a href="{{ route('admin.projects.edit', $project->id) }}" class="btn btn-sm btn-primary">Edit</a>
-                                    <form action="{{ route('admin.projects.destroy', $project->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure?')">
+                                    <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-sm btn-primary">Edit</a>
+                                    <form action="{{ route('projects.destroy', $project->id) }}" method="POST" class="d-inline" onsubmit="return confirm('Are you sure?')">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-danger">Delete</button>

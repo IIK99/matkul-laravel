@@ -13,7 +13,7 @@
                     </ul>
                 </div>
             @endif
-            <form action="{{ route('admin.projects.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('projects.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
                     <div class="col-md-6 mb-3">
@@ -42,7 +42,7 @@
                     <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Save Project</button>
-                <a href="{{ route('admin.projects.index') }}" class="btn btn-danger">Cancel</a>
+                <a href="{{ route('projects.index') }}" class="btn btn-danger">Cancel</a>
             </form>
         </div>
     </div>

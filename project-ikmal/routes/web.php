@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminProjectController;
+use App\Http\Controllers\Auth\AdminAuthController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,7 +24,11 @@ Route::get('/contact', function () {
 //     return redirect()->route('contact')->with('success', 'Terima kasih telah menghubungi kami!');
 // })->name('contact.submit');
 
-Route::prefix('admin')->name('admin.')->group(function () {
+Route::get('/admin/login', [AdminAuthController::class, 'showLoginFrom'])->name('login');
+Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.login');
+Route::post('/admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
+
+Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/', function () {
         return view('admin.home');
     })->name('dashboard');

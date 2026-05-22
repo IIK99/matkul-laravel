@@ -42,7 +42,7 @@
 <body>
     <navbar class="navbar navbar-expand-lg navbar-dark bg-warning fixed-top shadow-sm px-3">
         <div class="container">
-            <a href="{{ route('admin.dashboard') }}" class="navbar-brand">My Web Profile</a>
+            <a href="{{ route('dashboard') }}" class="navbar-brand">My Web Profile</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -51,16 +51,30 @@
                     <li class="nav-item">
                         <a href="{{ route('home') }}" class="nav-link">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Logout</a>
-                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ Auth::user()->name }}
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                        <li class="dropdown-item-text text-muted">
+                            <small>{{ Auth::user()->email }}</small>
+                        </li>
+                        <li>
+                            <form method="POST" action="{{ route('admin.logout') }}">
+                                @csrf
+                                <button type="submit" class="dropdown-item">Logout</button>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
                 </ul>
             </div>
         </div>
     </navbar>
     <div class="sidebar shadow-sm">
         <h5 class="text-center text-white">Admin Menu</h5>
-        <a href="{{ route('admin.projects.index') }}" class="list-group-item list-group-item-action">Data Projects</a>
+        <a href="{{ route('projects.index') }}" class="list-group-item list-group-item-action">Data Projects</a>
         <a href="#" class="list-group-item list-group-item-action">Data About</a>
         <a href="#" class="list-group-item list-group-item-action">Data Contact</a>
     </div>

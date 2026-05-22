@@ -42,7 +42,7 @@ class AdminProjectController extends Controller
             'status' => $request->status,
         ]);
 
-        return redirect()->route('admin.projects.index')->with('success', 'Project created successfully.');
+        return redirect()->route('projects.index')->with('success', 'Project created successfully.');
     }
 
     public function edit($id)
@@ -76,13 +76,13 @@ class AdminProjectController extends Controller
             'image' => $imagePath,
             'status' => $request->status,
         ]);
-        return redirect()->route('admin.projects.index')->with('success', 'Project updated successfully.');
+        return redirect()->route('projects.index')->with('success', 'Project updated successfully.');
     }
 
     public function destroy($id)
     {
         $project = Projects::findOrFail($id);
         $project->delete();
-        return redirect()->route('admin.projects.index')->with('success', 'Project deleted successfully.');
+        return redirect()->route('projects.index')->with('success', 'Project deleted successfully.');
     }
 }
