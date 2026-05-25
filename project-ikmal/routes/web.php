@@ -33,5 +33,9 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         return view('admin.home');
     })->name('dashboard');
 
+    Route::get('/projects/pdf', [AdminProjectController::class, 'cetak_pdf'])->name('projects.cetak_pdf');
+
+    Route::get('/projects/pdf/{id}', [AdminProjectController::class, 'cetak_pdf_By_Id'])->name('projects.cetak_pdf_by_id');
+
     Route::resource('projects', AdminProjectController::class);
 });

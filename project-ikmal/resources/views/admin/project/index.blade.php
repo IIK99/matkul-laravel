@@ -3,6 +3,7 @@
     <div class="container mt-5">
         <h3 class="mb-4">Data Project</h3>
         <a href="{{ route('projects.create') }}" class="btn btn-primary mb-3">Add Project</a>
+        <a href="{{ route('projects.cetak_pdf') }}" class="btn btn-danger mb-3" target="_blank">Cetak PDF</a>
         <div>
             @if(session('success'))
                 <div class="alert alert-success">
@@ -41,6 +42,7 @@
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+                                        <a href="{{ route('projects.cetak_pdf_by_id', $project->id) }}" class="btn btn-sm btn-success" target="_blank">Cetak PDF</a>
                                     </form>
                                 </td>
                             </tr>
