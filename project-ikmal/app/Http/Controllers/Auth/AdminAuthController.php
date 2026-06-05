@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class AdminAuthController extends Controller
 {
@@ -33,5 +35,87 @@ class AdminAuthController extends Controller
         $request->session()->regenerateToken();
 
         return redirect()->route('admin.login');
+    }
+
+    public function register(Request $request) {
+        $credentials = Validator::make($request->all(), [
+            'name' => 'required|max:255',
+            'email' => 'required|email|unique:users,email|max:255',
+            'password' => 'required|confirmed|min:8',
+        ]);
+
+        if ($credentials->fails()) {
+            return response()->json([
+                'errors' => $credentials->errors()
+            ], 422);
+        }
+
+        try {
+            $user = \App\Models\User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => bcrypt($request->password),  
+            ]);
+
+            $token = $user->createToken('auth_token')->plainTextToken;
+
+            return response()->json([
+                'success' => true,
+                'message' => 'User registration successful',
+                'data' => $user,
+                'access_token' => $token,
+                'token_type' => 'Bearer',
+            ], 201);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => 'User registration failed',
+                'error' => $e->getMessage()
+            ], 500);
+        }
+    }
+
+    // login with api
+    public function apiLogin(Request $request) {
+        $credentials = Validator::make($request->all(), [
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
+
+        $user = \App\Models\User::where('email', $request->email)->first();
+
+        if (!$user || !Hash::check($request->password, $user->password)) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Invalid email or password',
+            ], 401);
+        }
+
+        $token = $user->createToken('auth_token')->plainTextToken;
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Login successful',
+            'data' => $user,
+            'access_token' => $token,
+            'token_type' => 'Bearer',
+            'user' => [
+                'id' => $user->id,
+                'name' => $user->name,
+                'email' => $user->email,
+                'phone' => $user->phone,
+                'address' => $user->address,
+                'role' => $user->role,
+            ]
+        ], 200);
+    }
+
+    public function apiLogout(Request $request) {
+        $request->user()->currentAccessToken()->delete();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Logout successful',
+        ], 200);
     }
 }

@@ -6,6 +6,9 @@
     <title>@yield('title','Admin Web Profile')</title>
     <link rel="stylesheet" href="{{ asset('bootstrap-5.3.8-dist/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.8/css/dataTables.dataTables.css">
+    <script>
+        const API_TOKEN = '{{ session('api_token') }}';
+    </script>
 </head>
 <style>
     body {
