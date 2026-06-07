@@ -82,6 +82,12 @@ class AdminAuthController extends Controller
             'password' => 'required'
         ]);
 
+        if ($credentials->fails()) {
+            return response()->json([
+                'errors' => $credentials->errors()
+            ], 422);
+        }
+
         $user = \App\Models\User::where('email', $request->email)->first();
 
         if (!$user || !Hash::check($request->password, $user->password)) {
