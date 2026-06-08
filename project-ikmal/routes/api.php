@@ -9,5 +9,6 @@ Route::post('/register', [AdminAuthController::class, 'register'])->name('admin.
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::apiResource('users', UserController::class);
+    Route::get('/user-list', [UserController::class, 'getUsers'])->name('users.list');
     Route::post('/logout', [AdminAuthController::class, 'logout'])->name('admin.logoutApi');
 });

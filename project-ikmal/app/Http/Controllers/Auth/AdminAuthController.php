@@ -21,6 +21,22 @@ class AdminAuthController extends Controller
         ]);
 
         if (Auth::class::attempt($credentials)) {
+            $user = Auth::class::user();
+            $user->tokens()->delete();
+            $token = $user->createToken('auth_token')->plainTextToken;
+            session([
+                'api_token' => $token,
+            ]);
+
+            if ($request->expectsJson()) {
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Login successful',
+                    'data' => $user,
+                    'access_token' => $token,
+                    'token_type' => 'Bearer',
+                ], 200);
+            }
             return redirect()->intended(route('dashboard'));
         }
 

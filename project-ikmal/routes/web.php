@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminProjectController;
+use App\Http\Controllers\api\UserController;
 use App\Http\Controllers\Auth\AdminAuthController;
 use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
@@ -38,4 +39,6 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/projects/pdf/{id}', [AdminProjectController::class, 'cetak_pdf_By_Id'])->name('projects.cetak_pdf_by_id');
 
     Route::resource('projects', AdminProjectController::class);
+
+     Route::get('users', [UserController::class, 'index'])->name('admin.users');
 });

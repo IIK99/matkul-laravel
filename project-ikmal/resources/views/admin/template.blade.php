@@ -6,8 +6,11 @@
     <title>@yield('title','Admin Web Profile')</title>
     <link rel="stylesheet" href="{{ asset('bootstrap-5.3.8-dist/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.8/css/dataTables.dataTables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js">
     <script>
         const API_TOKEN = '{{ session('api_token') }}';
+        console.log('API Token:', API_TOKEN);
     </script>
 </head>
 <style>
@@ -78,7 +81,7 @@
     <div class="sidebar shadow-sm">
         <h5 class="text-center text-white">Admin Menu</h5>
         <a href="{{ route('projects.index') }}" class="list-group-item list-group-item-action">Data Projects</a>
-        <a href="#" class="list-group-item list-group-item-action">Data About</a>
+        <a href="{{ route('admin.users') }}" class="list-group-item list-group-item-action">Data User</a>
         <a href="#" class="list-group-item list-group-item-action">Data Contact</a>
     </div>
     <main class="content p-3 d-flex flex-column align-items-center">
