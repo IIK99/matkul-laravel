@@ -26,7 +26,11 @@
               
             </ul>
             <div class="user_option">
-              <a href="" class="user_link">
+              @if(auth()->check())
+                <a href="{{ route('admin.dashboard') }}" class="user_link" title="Admin Dashboard">
+              @else
+                <a href="{{ route('admin.login') }}" class="user_link" title="Login">
+              @endif
                 <i class="fa fa-user" aria-hidden="true"></i>
               </a>
               <a class="cart_link" href="#">

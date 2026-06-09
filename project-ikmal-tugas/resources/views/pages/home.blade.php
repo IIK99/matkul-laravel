@@ -59,7 +59,7 @@
                      Viral di TikTok & Instagram 🔥
                     </h1>
                     <p>
-                     <b>Datang Langsung! 📍 Cempaka Putih, Jakarta Pusat</b> <br> Buka setiap hari 09.00–22.00 WIB. <br> ⭐ 4.4 di Google Maps · Mulai Rp 24.000 · 100% Halal
+                     <b>Datang Langsung! 📍 Cempaka Putih, Jakarta Pusat</b> <br> Buka setiap hari 09.00–22.00 WIB. <br> ⭐ 4.4 di Google Maps · Mulai $ 24.000 · 100% Halal
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
@@ -269,7 +269,10 @@
                   <p>
                     {{ $menu->description }}
                   </p>
-                  <div class="options">
+                  <div class="options d-flex justify-content-between align-items-center">
+                    <h6 style="margin-bottom: 0;">
+                      ${{ number_format($menu->price, 0, ',', '.') }}
+                    </h6>
                     <a href="{{ route('menu.detail', $menu->id) }}" class="btn text-white rounded-pill px-4 py-2" style="background-color: #ffbe33;">
                       <i class="fa fa-arrow-right"></i>
                     </a>
