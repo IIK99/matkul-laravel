@@ -21,9 +21,9 @@ Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
 
-// Route::post('/contact', function () {
-//     return redirect()->route('contact')->with('success', 'Terima kasih telah menghubungi kami!');
-// })->name('contact.submit');
+Route::post('/contact', function () {
+    return redirect()->route('contact')->with('success', 'Terima kasih telah menghubungi kami!');
+})->name('contact.submit');
 
 Route::get('/admin/login', [AdminAuthController::class, 'showLoginFrom'])->name('login');
 Route::post('/admin/login', [AdminAuthController::class, 'login'])->name('admin.login');

@@ -22,10 +22,10 @@
                         <a href="{{ route('projects') }}" class="nav-link">Project</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('about') }}" class="nav-link">About</a>
+                        <a href="#" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ route('contact') }}" class="nav-link">Contact</a>
+                        <a href="#" class="nav-link">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('dashboard') }}" class="nav-link">Login</a>
